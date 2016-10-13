@@ -1,7 +1,7 @@
 # TwitterBot
 
 1. What this bot is used for?
-2. lol
+2. 
 3.
 4.
 5.
