@@ -1,5 +1,7 @@
-# TwiiterBot
+# TwitterBot
 
-1. asdf
-2. asdf
-3. dfefe
+1. What this bot is used for?
+2.
+3.
+4.
+5.
