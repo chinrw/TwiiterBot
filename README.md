@@ -1,7 +1,11 @@
 # TwitterBot
 
-1. What this bot is used for?
-2. 
-3.
-4.
-5.
+### Used for
+1. Response?
+2. Collect Data?
+3. Deliver Data?
+
+
+#### Collect System Status
+1. use sar
+2. which language? Python
