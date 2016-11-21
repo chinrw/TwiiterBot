@@ -5,15 +5,11 @@ import urllib2,urllib
 import json
 
 def get_weather_Data(cityid, api_key):
+    # return a dict data that coutains required information
 
-    headers = { #pretent to be explorer
-        'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) \
-        Gecko/20091201 Firefox/3.5.6'
-    }
-
-    url = 'http://api.openweathermap.org/data/2.5/forecast/city?id=%d&APPID=%s'\
-        %(cityid, api_key)
-    req = urllib2.Request(url,headers=headers)
+    url = 'http://api.wunderground.com/api/%s/hourly/q/NY/Troy.json'\
+        %(api_key)
+    req = urllib2.Request(url)
     content = urllib2.urlopen(req).read()
     data = json.loads(content)
 
@@ -21,5 +17,5 @@ def get_weather_Data(cityid, api_key):
 
 if __name__ == "__main__":
     cityid = 5141502
-    api_key = 'f5e9db5f5e582a912c6dd798d63e1a1f'
+    api_key = '3dfa9f9c19a712ac'
     get_weather_Data(cityid, api_key)
