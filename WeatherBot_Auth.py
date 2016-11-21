@@ -22,10 +22,5 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 highpoints = re.compile(u'[\uD800-\uDBFF][\uDC00-\uDFFF]')
 public_tweets = api.home_timeline()
-num = 0
-for tweet in public_tweets:
-    print num
-    num += 1
-    text_noem = highpoints.sub('--emoji--', tweet.text)
-    text_noem = text_noem.encode('utf8')
-    print (text_noem)
+word = "just a test"
+api.update_status(status = word)
