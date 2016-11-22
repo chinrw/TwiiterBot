@@ -19,7 +19,7 @@ access_secret = 'gfB2FXA5eho99pU8ZZ7RkxZI6vr8OXlgzE7LEfzx0d5XX'
 # keep the quotes, replace this with your access token secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
-api = tweepy.API(auth)
+api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 if __name__ == "__main__":
     api_key = '3dfa9f9c19a712ac'
