@@ -29,5 +29,4 @@ if __name__ == "__main__":
     temp = data["current_observation"]['temperature_string']
     time = data["current_observation"]["observation_time"]
     tweet_output = location + '\n' + time + '\n' + temp + '\n' +"feeling like "+ wind + "\n"
-
     api.update_status(status=tweet_output)
