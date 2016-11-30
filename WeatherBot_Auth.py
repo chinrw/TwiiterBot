@@ -1,44 +1,91 @@
 #!/usr/bin/env python
-# encoding: utf-8
 
+import sys
 import tweepy
-from GetWeather_Data import *
 
-# enter the corresponding information from your twitter application:
-consumer_key = 'ftpSZnEi0f3JnoaBXtCg2BxH0'
-# keep the quotes, replace this with your consumer key
-consumer_secret = 'VX2zyXVqyhYGVsj5doIOho8VEjqQKPXrChENchyBKnzU1tWQVJ'
-# keep the quotes, replace this with your consumer secret key
-access_key = '796182382286163968-fc9ewRIC4gNhVRAz6ZYw0QkaDBwE2W2'
-# keep the quotes, replace this with your access token
-access_secret = 'QZa7h3Grix7PAVFThrsgKBa3Ic40f0wyRTSKsUGKb6m7i'
-# keep the quotes, replace this with your access token secret
+class Authorizer(object):
+    '''
+    Authorizer class for Twitter Authentication.
+    '''
+    def __init__(self, filename):
+        '''
+        Initialize Authorizer object from file from data.
+        '''
+        self.__filename = filename
+        self.__consumer_key = str()
+        self.__consumer_secret = str()
+        self.__access_key = str()
+        self.__access_secret = str()
+        self.parse_file(self.__filename)
 
-def authenticate(cons_key, cons_secret, acc_key, acc_secret):
+    def parse_file(self, filename):
+        '''
+        Parses input file for consumer/access keys/secrets.
+        '''
+        with open(filename) as f:
+            lines = f.readlines()
+            keys = 0
+            for line in xrange(len(lines)):
+                if lines[line][0] != "#":
+                    key = lines[line].rstrip()
+                    keys += 1
+                    if keys == 1:
+                        self.consumer_key =  key
+                    elif keys == 2:
+                        self.consumer_secret = key
+                    elif keys == 3:
+                        self.access_key = key
+                    elif keys == 4:
+                        self.access_secret = key
+                    else:
+                        break
+
+    def get_cons_key(self):
+        '''
+        Returns the consumer key.
+        '''
+        return self.__consumer_key
+
+    def get_cons_secret(self):
+        '''
+        Returns the consumer secret.
+        '''
+        return self.__consumer_secret
+
+    def get_acc_key(self):
+        '''
+        Returns the access key.
+        '''
+        return self.__access_key
+
+    def get_acc_secret(self):
+        '''
+        Returns the access secret.
+        '''
+        return self.__access_secret
+
+def authenticate(keys_file):
     '''
-    Authenticates Twitter credentials.
-    Returns Twitter API object.
+    Authenticates app with Twitter.
+    Returns API object.
     '''
-    auth = tweepy.OAuthHandler(cons_key, cons_secret)
-    auth.set_access_token(acc_key, acc_secret)
-    return tweepy.API(auth, parser=tweepy.parsers.JSONParser())
+    auth = Authorizer(keys_file)
+    auth_handler = tweepy.OAuthHandler(auth.get_cons_key(), auth.get_cons_secret())
+    auth_handler.set_access_token(auth.get_acc_key(), auth.get_acc_secret())
+    return tweepy.API(auth_handler, parser=tweepy.parsers.JSONParser())
 
 def run():
     '''
-    Main function to run the program.
+    Main function for testing.
     '''
-    api = authenticate(consumer_key, consumer_secret, access_key, access_secret)
-    api_key = '3dfa9f9c19a712ac'
-    data = get_weather_Data(api_key)
+    if len(sys.argv) < 2:
+        print ("Error: Not enough arguments.")
+        from usage import usage
+        usage()
+        sys.exit(1)
 
-    location = data["current_observation"]["display_location"]["full"]
-    wind     = data["current_observation"]['windchill_string']
-    temp     = data["current_observation"]['temperature_string']
-    time     = data["current_observation"]["observation_time"]
-    tweet_output = location + '\n' + time + '\n' + temp + '\n' +"feeling like "+ wind + '\n'
+    authenticate(sys.argv[1])
 
-    api.update_status(status=tweet_output)
-
-
+# ============================================================================ #
 if __name__ == "__main__":
     run()
