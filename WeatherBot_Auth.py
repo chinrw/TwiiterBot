@@ -16,6 +16,7 @@ class Authorizer(object):
         self.__consumer_secret = str()
         self.__access_key = str()
         self.__access_secret = str()
+        self.__weather_key = str()
         self.parse_file(self.__filename)
 
     def parse_file(self, filename):
@@ -30,13 +31,15 @@ class Authorizer(object):
                     key = lines[line].rstrip()
                     keys += 1
                     if keys == 1:
-                        self.consumer_key =  key
+                        self.__consumer_key =  key
                     elif keys == 2:
-                        self.consumer_secret = key
+                        self.__consumer_secret = key
                     elif keys == 3:
-                        self.access_key = key
+                        self.__access_key = key
                     elif keys == 4:
-                        self.access_secret = key
+                        self.__access_secret = key
+                    elif keys == 5:
+                        self.__weather_key = key
                     else:
                         break
 
