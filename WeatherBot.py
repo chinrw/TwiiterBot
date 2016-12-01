@@ -2,11 +2,12 @@
 
 import sys
 from WeatherBot_Auth import authenticate
+from GetWeather_Data import get_weather_data
 
 def arg_check():
-    '''
+    """
     Checks to see if enough arguments are passed to the program.
-    '''
+    """
     if len(sys.argv) < 2:
         print("Error: Not enough arguments.")
         from usage import usage
@@ -14,17 +15,17 @@ def arg_check():
         sys.exit(1)
 
 def main():
-    '''
+    """
     Main function for WeatherBot.
-    '''
+    """
     arg_check()
 
     keys_file = sys.argv[1]
-    api = authenticate(keys_file)
+    twitter, weather_key = authenticate(keys_file)
 
-    '''
-    api_key = '3dfa9f9c19a712ac'
-    data = get_weather_Data(api_key)
+    # weather_key = 'f4d95466fcf4f1dc'
+    weather_key = '3dfa9f9c19a712ac'
+    data = get_weather_data(weather_key)
 
     location = data["current_observation"]["display_location"]["full"]
     wind     = data["current_observation"]['windchill_string']
@@ -33,8 +34,10 @@ def main():
 
     tweet_output = location + '\n' + time + '\n' + temp + '\n' +"feeling like "+ wind + '\n'
 
-    api.update_status(status=tweet_output)
-    '''
+    print(tweet_output)
+
+    #api.update_status(status=tweet_output)
+
 
 # ============================================================================ #
 if __name__ == "__main__":
