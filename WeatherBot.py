@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 import sys
-from WeatherBot_Auth import authenticate
 from GetWeather_Data import get_weather_data
+from WeatherBot_Auth import authenticate
 
 def arg_check():
     """
@@ -33,10 +33,9 @@ def main():
     time     = data["current_observation"]["observation_time"]
 
     tweet_output = location + '\n' + time + '\n' + temp + '\n' +"feeling like "+ wind + '\n'
-
     print(tweet_output)
 
-    #api.update_status(status=tweet_output)
+    api.update_status(status=tweet_output)
 
 
 # ============================================================================ #

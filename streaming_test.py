@@ -1,4 +1,5 @@
 import tweepy
+import json
 
 # enter the corresponding information from your twitter application:
 consumer_key = 'ftpSZnEi0f3JnoaBXtCg2BxH0'
@@ -13,8 +14,10 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
-
 class MyStreamListener(tweepy.StreamListener):
+
+    def __init__(self):
+        self.count = 0
 
     def on_connect(self):
         print("Connection established!!")
@@ -23,7 +26,9 @@ class MyStreamListener(tweepy.StreamListener):
         print("Connection lost!! : ", notice)
 
     def on_data(self, data):
-        print data
+        content = json.loads(data)
+        if "direct_message" in content:
+            print content
         return True
 
     def on_direct_message(self, status):

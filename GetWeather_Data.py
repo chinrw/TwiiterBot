@@ -5,7 +5,7 @@ import urllib
 import urllib2
 
 
-def get_weather_Data(api_key):
+def get_weather_data(api_key):
     # return a dict data that coutains required information
 
     url = 'http://api.wunderground.com/api/%s/conditions/q/NY/Troy.json'\
