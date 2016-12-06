@@ -21,7 +21,7 @@ def main():
     arg_check()
 
     keys_file = sys.argv[1]
-    twitter, weather_key = authenticate(keys_file)
+    twitter, auth, weather_key = authenticate(keys_file)
 
     # weather_key = 'f4d95466fcf4f1dc'
     weather_key = '3dfa9f9c19a712ac'
@@ -35,7 +35,7 @@ def main():
     tweet_output = location + '\n' + time + '\n' + temp + '\n' +"feeling like "+ wind + '\n'
     print(tweet_output)
 
-    api.update_status(status=tweet_output)
+    twitter.update_status(status=tweet_output)
 
 
 # ============================================================================ #

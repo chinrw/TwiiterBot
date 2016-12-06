@@ -1,18 +1,18 @@
 import tweepy
+import sys
 import json
+from pprint import pprint
+from WeatherBot_Auth import authenticate
 
-# enter the corresponding information from your twitter application:
-consumer_key = 'ftpSZnEi0f3JnoaBXtCg2BxH0'
-# keep the quotes, replace this with your consumer key
-consumer_secret = 'VX2zyXVqyhYGVsj5doIOho8VEjqQKPXrChENchyBKnzU1tWQVJ'
-# keep the quotes, replace this with your consumer secret key
-access_key = '796182382286163968-fc9ewRIC4gNhVRAz6ZYw0QkaDBwE2W2'
-# keep the quotes, replace this with your access token
-access_secret = 'QZa7h3Grix7PAVFThrsgKBa3Ic40f0wyRTSKsUGKb6m7i'
-# keep the quotes, replace this with your access token secret
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_key, access_secret)
-api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
+def arg_check():
+    """
+    Checks to see if enough arguments are passed to the program.
+    """
+    if len(sys.argv) < 2:
+        print("Error: Not enough arguments.")
+        from usage import usage
+        usage()
+        sys.exit(1)
 
 class MyStreamListener(tweepy.StreamListener):
 
@@ -28,7 +28,8 @@ class MyStreamListener(tweepy.StreamListener):
     def on_data(self, data):
         content = json.loads(data)
         if "direct_message" in content:
-            print content
+            pprint(content)
+            direct_message_analyze(content["direct_message"])
         return True
 
     def on_direct_message(self, status):
@@ -39,7 +40,19 @@ class MyStreamListener(tweepy.StreamListener):
     def on_error(self, status):
         print (statuses)
 
+def direct_message_analyze(content):
+    message = twitter.get_direct_message(content["id"])
+    content = json.loads(message)
+    pprint(content)
+
+
 if __name__ == "__main__":
+
+    arg_check()
+
+    keys_file = sys.argv[1]
+    twitter, auth, weather_key = authenticate(keys_file)
+
     l = MyStreamListener()
     stream = tweepy.Stream(auth, l)
     stream.userstream()

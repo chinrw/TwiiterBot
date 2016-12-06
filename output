@@ -1,40 +1,94 @@
-0
-RT @LocalNowTWC: Rain drenching #NewYorkCity right now. Check the #weather anytime:  iOS - https://t.co/kUDGdo5bpC &amp; Android - https://t.co…
-1
-RT @The_Galaxieman: Supermoon fixed in Lightroom on PC vs on the phone. @Sigma_Photo 400mm f/5.6, @Canon 6D ISO1600 1/80s #supermoon #AirFo…
-2
-A broad area of low pressure has formed in the SW Caribbean, and a tropical depression or storm is likely to develo… https://t.co/oRAsv5h7lX
-3
-RT @NWSPocatello: This week's trivia might be a little odd but maybe you'll learn something! https://t.co/7HkipbCb3G
-4
-After forecasts for 0.1-0.5 inches of rain last night in DC, no measurable rain fell (just trace amounts). Dry situation gets worse.
-5
-Here's our take on the chance of different snow amounts in DC this winter. Read our winter outlook for more detail:… https://t.co/avAkC50eqG
-6
-Video overview of our winter outlook for DC: https://t.co/y2qPKQ4Q70
-7
-A November reality check is ahead later this week as colder temperatures will spread across much of the U.S.:… https://t.co/ufKJsZt7hV
-8
-AccuWeather is proud to announce @AccuWeather Ready, a new weather preparedness program #AccuWeatherReady… https://t.co/BnA4i2CmGP
-9
-RT @mkvackay: #Supermoon moonset Nov. 14th over i70 | @Colorado @JimCantore @AnicaPadilla @KirkYuhnke @SPACEdotcom @StormHour @visitdenver…
-10
-RT @DavidMora: You couldn't ask for a prettier day in the Crescent City. 🌞🌳⚜️ #downtownnola #followyournola #lafayettesquare https://t.co/V…
-11
-RT @KerrinJeromin: Did ya see this one? Pic from Miami Beach parking garage. Extra #HighTides carrying in more than sea water https://t.co/…
-12
-RT @GSBImagesMBusch: Watch “SuperMoon Timelapse 11-14-16” on #Vimeo https://t.co/2GsJEzsPIk @JimCantore @weatherchannel @JenCarfagno @spann…
-13
-RT @wamu885news: LISTEN: What's the forecast for the winter ahead? We talk to @capitalweather forecaster Matt Ross https://t.co/gIda9D5tvW…
-14
-How bad (or good) is this winter going to be? Read the winter outlook: https://t.co/0eTgYFDfXZ
-15
-#Winter blast for some by the end of the week, find out who could see their first #snow &amp; #freeze of the season on… https://t.co/T4PDn7Y2Kx
-16
-A satellite image made better by the moonlight #BetterThanTheSuperMoon https://t.co/uLnpGrH5tZ
-17
-Thank you! I do love it in that ballroom--best team at @DancingABC https://t.co/t1LDyjkGxJ
-18
-Shovels/snowthrowers ready? A multi-day #snow maker is ahead for the West, Plains, Great Lakes, interior Northeast.… https://t.co/LkfayjAOGG
-19
-Don’t bend down for a closer look or you might get a spider cricket in your face. https://t.co/Yfc7JT95cs
+Connection established!!
+{u'direct_message': {u'created_at': u'Mon Dec 05 22:53:11 +0000 2016',
+                     u'entities': {u'hashtags': [],
+                                   u'symbols': [],
+                                   u'urls': [],
+                                   u'user_mentions': []},
+                     u'id': 805907901797847043,
+                     u'id_str': u'805907901797847043',
+                     u'recipient': {u'contributors_enabled': False,
+                                    u'created_at': u'Wed Nov 09 02:47:27 +0000 2016',
+                                    u'default_profile': True,
+                                    u'default_profile_image': False,
+                                    u'description': None,
+                                    u'favourites_count': 0,
+                                    u'follow_request_sent': False,
+                                    u'followers_count': 1,
+                                    u'following': False,
+                                    u'friends_count': 11,
+                                    u'geo_enabled': False,
+                                    u'id': 796182382286163968,
+                                    u'id_str': u'796182382286163968',
+                                    u'is_translation_enabled': False,
+                                    u'is_translator': False,
+                                    u'lang': u'en',
+                                    u'listed_count': 0,
+                                    u'location': None,
+                                    u'name': u'WeatherBot',
+                                    u'notifications': False,
+                                    u'profile_background_color': u'F5F8FA',
+                                    u'profile_background_image_url': None,
+                                    u'profile_background_image_url_https': None,
+                                    u'profile_background_tile': False,
+                                    u'profile_image_url': u'http://pbs.twimg.com/profile_images/801118347274424321/_-g9fXsw_normal.jpg',
+                                    u'profile_image_url_https': u'https://pbs.twimg.com/profile_images/801118347274424321/_-g9fXsw_normal.jpg',
+                                    u'profile_link_color': u'1DA1F2',
+                                    u'profile_sidebar_border_color': u'C0DEED',
+                                    u'profile_sidebar_fill_color': u'DDEEF6',
+                                    u'profile_text_color': u'333333',
+                                    u'profile_use_background_image': True,
+                                    u'protected': False,
+                                    u'screen_name': u'WeatherBot_RPI',
+                                    u'statuses_count': 7,
+                                    u'time_zone': u'Pacific Time (US & Canada)',
+                                    u'translator_type': u'none',
+                                    u'url': None,
+                                    u'utc_offset': -28800,
+                                    u'verified': False},
+                     u'recipient_id': 796182382286163968,
+                     u'recipient_id_str': u'796182382286163968',
+                     u'recipient_screen_name': u'WeatherBot_RPI',
+                     u'sender': {u'contributors_enabled': False,
+                                 u'created_at': u'Sun May 17 02:39:04 +0000 2015',
+                                 u'default_profile': True,
+                                 u'default_profile_image': False,
+                                 u'description': u'2333',
+                                 u'favourites_count': 0,
+                                 u'follow_request_sent': False,
+                                 u'followers_count': 0,
+                                 u'following': False,
+                                 u'friends_count': 17,
+                                 u'geo_enabled': False,
+                                 u'id': 3198328536,
+                                 u'id_str': u'3198328536',
+                                 u'is_translation_enabled': False,
+                                 u'is_translator': False,
+                                 u'lang': u'en',
+                                 u'listed_count': 0,
+                                 u'location': None,
+                                 u'name': u'Rowen Chin',
+                                 u'notifications': False,
+                                 u'profile_background_color': u'C0DEED',
+                                 u'profile_background_image_url': u'http://abs.twimg.com/images/themes/theme1/bg.png',
+                                 u'profile_background_image_url_https': u'https://abs.twimg.com/images/themes/theme1/bg.png',
+                                 u'profile_background_tile': False,
+                                 u'profile_banner_url': u'https://pbs.twimg.com/profile_banners/3198328536/1476379345',
+                                 u'profile_image_url': u'http://pbs.twimg.com/profile_images/786618153732280321/h522GQdU_normal.jpg',
+                                 u'profile_image_url_https': u'https://pbs.twimg.com/profile_images/786618153732280321/h522GQdU_normal.jpg',
+                                 u'profile_link_color': u'1DA1F2',
+                                 u'profile_sidebar_border_color': u'C0DEED',
+                                 u'profile_sidebar_fill_color': u'DDEEF6',
+                                 u'profile_text_color': u'333333',
+                                 u'profile_use_background_image': True,
+                                 u'protected': False,
+                                 u'screen_name': u'chinqrw',
+                                 u'statuses_count': 5,
+                                 u'time_zone': u'Pacific Time (US & Canada)',
+                                 u'translator_type': u'none',
+                                 u'url': None,
+                                 u'utc_offset': -28800,
+                                 u'verified': False},
+                     u'sender_id': 3198328536,
+                     u'sender_id_str': u'3198328536',
+                     u'sender_screen_name': u'chinqrw',
+                     u'text': u'lol'}}
