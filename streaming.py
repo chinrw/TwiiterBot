@@ -41,9 +41,10 @@ class MyStreamListener(tweepy.StreamListener):
         print (statuses)
 
 def direct_message_analyze(content):
-    message = twitter.get_direct_message(content["id"])
-    content = json.loads(message)
-    pprint(content)
+    if "id" in content:
+        message = twitter.get_direct_message(content["id"])
+        return message["text"]
+    return data
 
 
 if __name__ == "__main__":

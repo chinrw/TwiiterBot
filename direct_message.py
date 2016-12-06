@@ -3,7 +3,6 @@
 
 import tweepy
 
-from GetWeather_Data import *
 
 # enter the corresponding information from your twitter application:
 consumer_key = 'ftpSZnEi0f3JnoaBXtCg2BxH0'
@@ -19,4 +18,6 @@ auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 if __name__=="__main__":
-    api.send_direct_message("@chinqrw", "just a test2")
+    id = 3198328536
+    message = 'just a test'
+    api.send_direct_message(user_id = id, text = message)
