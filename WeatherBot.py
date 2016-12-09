@@ -25,7 +25,7 @@ def get_current_weather(request_type="conditions",\
     Returns a string with current weather information for tweet.
     """
     keys_file = sys.argv[1]
-    twitter, weather_key = authenticate(keys_file)
+    twitter, auth, weather_key = authenticate(keys_file)
 
     data = get_weather_data(weather_key, request_type, location)
 

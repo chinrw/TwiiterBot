@@ -82,7 +82,7 @@ def authenticate(keys_file):
     auth_handler = tweepy.OAuthHandler(auth.get_cons_key(), auth.get_cons_secret())
     auth_handler.set_access_token(auth.get_acc_key(), auth.get_acc_secret())
     return tweepy.API(auth_handler, parser=tweepy.parsers.JSONParser()),\
-            auth.get_weather_key()
+            auth, auth.get_weather_key()
 
 def run():
     """
