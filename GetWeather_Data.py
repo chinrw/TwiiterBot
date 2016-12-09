@@ -6,7 +6,7 @@ import urllib2
 from pprint import pprint
 
 
-def get_weather_data(api_key, request_type,location):
+def get_weather_data(api_key, request_type, location):
     # return a dict data that coutains required information
 
     url = 'http://api.wunderground.com/api/%s/%s/%s.json'\
