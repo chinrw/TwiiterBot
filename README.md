@@ -1,21 +1,11 @@
-# TwitterBot
+# WeatherBot
 
+### WeatherBot is an open source automated twitter bot that iteratively tweets out weather data.
 
-### Requirment
+## Requirements
 [Tweepy](https://github.com/tweepy/tweepy)
 
 [Python 2.7](https://www.python.org/downloads/release/python-2712/)
-
-### Used for
-1. Response?
-2. Collect Data?
-3. Deliver Data?
-
-
-#### Collect System Status
-1. use sar
-2. which language? Python
-
 
 #### Future Plans
 1. Include emergency alerts.
