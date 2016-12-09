@@ -6,9 +6,10 @@ import urllib2
 from pprint import pprint
 
 
-def get_weather_data(api_key, request_type, location):
+def get_weather_data(api_key,\
+                     request_type="conditions",\
+                     location="/q/zmw:12180.1.99999"):
     # return a dict data that coutains required information
-
     url = 'http://api.wunderground.com/api/%s/%s/%s.json'\
         % (api_key, request_type,location)
     req = urllib2.Request(url)
