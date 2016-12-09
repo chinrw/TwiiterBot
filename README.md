@@ -1,6 +1,6 @@
 # WeatherBot
 
-### WeatherBot is an open source automated twitter bot that iteratively tweets out weather data.
+### WeatherBot is an open source automated twitter bot that iteratively tweets out weather data. The default city is Troy, NY.
 
 ## Requirements
 [Tweepy](https://github.com/tweepy/tweepy)
