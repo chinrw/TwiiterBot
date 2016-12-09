@@ -1,5 +1,11 @@
 # TwitterBot
 
+
+### Requirment
+[Tweepy](https://github.com/tweepy/tweepy)
+
+[Python 2.7](https://www.python.org/downloads/release/python-2712/)
+
 ### Used for
 1. Response?
 2. Collect Data?
