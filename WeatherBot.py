@@ -63,7 +63,7 @@ def tweet():
 
     if len(icon_file) > 0:
         twitter_api.update_with_media(filename=icon_file, status=tweet_text)
-        os.remove(filename)
+        os.remove(icon_file)
 
     else:
         twitter_api.update(status=tweet_text)
