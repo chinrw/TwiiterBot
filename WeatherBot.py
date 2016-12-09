@@ -72,6 +72,7 @@ def scheduled_tweet(minutes):
     """
     Tweets iteratively every given amount of minutes.
     """
+    tweet()
     s = sched.scheduler(time.time, time.sleep)
     s.enter(60*minutes, 1, tweet, ())
     s.run()
@@ -84,7 +85,7 @@ def run():
     arg_check()
 
     if len(sys.argv) > 2:
-        minutes = sys.argv[2]
+        minutes = int(sys.argv[2])
         scheduled_tweet(minutes)
 
     else:
