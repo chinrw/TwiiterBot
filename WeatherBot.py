@@ -53,8 +53,8 @@ def main():
     twitter, auth, weather_key = authenticate(keys_file)
 
     location = '/q/zmw:12180.1.99999'
-    data = get_weather_data(weather_key, request_type, location)
     request_type = "conditions"
+    data = get_weather_data(weather_key, request_type, location)
 
     location = data["current_observation"]["display_location"]["full"]
     weahter  = data["current_observation"]["weather"]
