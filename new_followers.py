@@ -51,4 +51,4 @@ def new_followers_check():
 if __name__ == "__main__":
     for i in range(0, 500):
         new_followers_check()
-        time.sleep(60)
+        time.sleep(15)
