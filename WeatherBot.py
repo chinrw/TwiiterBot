@@ -61,7 +61,7 @@ def tweet(twitter_api, text, image_file=""):
     else:
         twitter_api.update(status=text)
 
-def main():
+def run():
     """
     Main function to run the program.
     update twitter status on timeline.
@@ -77,7 +77,6 @@ def main():
 
     tweet(twitter, tweet_text, icon_file)
 
-
 # ============================================================================ #
 if __name__ == "__main__":
-    main()
+    run()
