@@ -30,7 +30,6 @@ def location_autocomplete(input):
 
 if __name__ == "__main__":
     cityid = 5141502
-    api_key = '3dfa9f9c19a712ac'
     location = '/q/zmw:12180.1.99999'
     #print get_weather_data(api_key, "conditions",location)
     pprint(location_autocomplete("troy"))
