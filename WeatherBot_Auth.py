@@ -84,7 +84,6 @@ def authenticate(keys_file):
     return tweepy.API(auth_handler, parser=tweepy.parsers.JSONParser()),\
             auth_handler,auth.get_weather_key()
 
-
 def run():
     """
     Main function for testing.
