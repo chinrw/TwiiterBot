@@ -6,6 +6,7 @@ from pprint import pprint
 import tweepy
 
 import GetWeather_Data
+from WeatherBot import get_current_weather
 from WeatherBot_Auth import authenticate
 
 
@@ -46,9 +47,29 @@ class MyStreamListener(tweepy.StreamListener):
                     message)
                 if len(candidate_locations["RESULTS"]) == 1:
                     # only one result output
-                    get_data_from_location(
+                    weather_data = get_data_from_location(
                         candidate_locations, self.twitter, self.weather_key)
+                    location = weather_data["current_observation"][
+                        "display_location"]["full"]
+                    weahter = weather_data["current_observation"]["weather"]
+                    windchill = weather_data[
+                        "current_observation"]['windchill_string']
+                    temp = weather_data["current_observation"][
+                        'temperature_string']
+                    time = weather_data["current_observation"][
+                        "observation_time"]
+                    wind = weather_data["current_observation"]["wind_string"]
+                    humi = weather_data["current_observation"][
+                        "relative_humidity"]
+                    tweet_text = location + '\n' \
+                        + time     + '\n' \
+                        + temp     + '\n' \
+                                   + "Feels like " + windchill + '\n'\
+                                   + wind + '\n'
+
                     self.location_list.remove(id)
+                    self.twitter.send_direct_message(user_id=id,
+                                                     text=tweet_text)
 
                 elif len(candidate_locations["RESULTS"]) > 1:
                     # have serveral results output all of them

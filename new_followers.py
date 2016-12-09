@@ -41,7 +41,8 @@ def new_followers_check():
     if list(changes) and changes.issubset(set(followers_id)):
         for id in list(changes):
             twitter.send_direct_message(
-                user_id=id, text="Thank you for following us")
+                user_id=id, text="Thank you for following us, please input \
+                'location' keywords to get weather information")
                 # send message to new followers
 
     with open("followers.json", 'w') as f:
