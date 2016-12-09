@@ -52,8 +52,9 @@ def main():
     keys_file = sys.argv[1]
     twitter, auth, weather_key = authenticate(keys_file)
 
-    location = '/q/zmw:12180.1.99999'
     request_type = "conditions"
+    location = '/q/zmw:12180.1.99999'
+    
     data = get_weather_data(weather_key, request_type, location)
 
     location = data["current_observation"]["display_location"]["full"]
